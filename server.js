@@ -34,8 +34,6 @@ Object.assign=require('object-assign')
 
 
 
-const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))//static vue location
-//we need to make sure that we do all the dynamic routing first then the vue routing 
 
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
@@ -61,6 +59,8 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
 var server = require('http').createServer(app);
 
 
+const staticFileMiddleware = app.static(path.join(__dirname + '/dist'))//static vue location
+//we need to make sure that we do all the dynamic routing first then the vue routing 
 
 
 
