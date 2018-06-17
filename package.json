@@ -27,7 +27,7 @@
     "circular-json":"~0.5.3",
     "graphql":"^0.13.2",
     "poker-hand-evaluator":"^1.0.1",
-    "js-combinatorics":"^0.5.3"
+    "js-combinatorics":"^0.5.3",
     "connect-history-api-fallback":"^1.5.0"
 
   },
