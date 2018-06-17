@@ -5,6 +5,7 @@ var express = require('express'),
     morgan  = require('morgan');
     const url = require('url');
     const WebSocket = require('ws');
+    const path = require('path');
     const CircularJSON = require('circular-json');// a better json string and parse
 const history = require('connect-history-api-fallback');
 var serveStatic = require('serve-static');
