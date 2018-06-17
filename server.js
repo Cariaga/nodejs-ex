@@ -6,6 +6,8 @@ var express = require('express'),
     const url = require('url');
     const WebSocket = require('ws');
     const CircularJSON = require('circular-json');// a better json string and parse
+const history = require('connect-history-api-fallback');
+var serveStatic = require('serve-static');
 
 const uuid = require('uuid');
 
@@ -29,6 +31,11 @@ var randomProfile = require('random-profile-generator');
 var fakerator = require("fakerator")();
 
 Object.assign=require('object-assign')
+
+
+
+const staticFileMiddleware = express.static(path.join(__dirname + '/dist'))//static vue location
+//we need to make sure that we do all the dynamic routing first then the vue routing 
 
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
@@ -668,6 +675,19 @@ app.get('/pagecount', function (req, res) {
 });
 
 
+  //---dynamic routing start
+  app.get('/test2', (req, res) => res.send('hello'))
+  app.set('views', path.join(__dirname, 'views'))
+  //---dynamic routing end
+
+  //---vue location start
+  app.use(staticFileMiddleware)
+  app.use(history({
+    disableDotRule: true,
+    verbose: true
+  }))
+  app.use(staticFileMiddleware)
+  //---vue location end
 
 
 
