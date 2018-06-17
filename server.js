@@ -570,6 +570,19 @@ app.use("/Dashboard", express.static(__dirname + "/Dashboard"));//so we can incl
 
 app.use("/Poker", express.static(__dirname + "/Poker"));
 
+  //---dynamic routing start
+  app.get('/test2', (req, res) => res.send('hello'));
+  app.set('views', path.join(__dirname, 'views'));
+  //---dynamic routing end
+
+  //---vue location start
+  app.use(staticFileMiddleware)
+  app.use(history({
+    disableDotRule: true,
+    verbose: true
+  }))
+  app.use(staticFileMiddleware)
+  //---vue location end
 
 
 
@@ -676,19 +689,6 @@ app.get('/pagecount', function (req, res) {
 });
 
 
-  //---dynamic routing start
-  app.get('/test2', (req, res) => res.send('hello'))
-  app.set('views', path.join(__dirname, 'views'))
-  //---dynamic routing end
-
-  //---vue location start
-  app.use(staticFileMiddleware)
-  app.use(history({
-    disableDotRule: true,
-    verbose: true
-  }))
-  app.use(staticFileMiddleware)
-  //---vue location end
 
 
 
