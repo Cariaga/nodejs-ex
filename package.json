@@ -86,13 +86,14 @@
     "npm": "*"
   },
   "scripts": {
-    "postinstall": "npm install express && npm run build",
+    "postinstall": "npm run build",
     "prewatch":"echo inlined example and pre watched example",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "zbuild" :"webpack --mode production --display-error-details --progress --colors ./scripts/mylibrary.js",
     "zdev" :"webpack --mode development --display-error-details --progress --colors  ./scripts/mylibrary.js",
      "lint": "eslint --ext .js,.vue src",
     "prestart":"",
+    "build": "build/build.js",
     "watch":"node scripts/watch.js",
     "postwatch":"echo happends after everything finished for watch",
     "start": "node server.js",
