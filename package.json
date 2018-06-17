@@ -94,7 +94,7 @@
     
     "watch":"node scripts/watch.js",
     "postwatch":"echo happends after everything finished for watch",
-    "start": "npm run dev && node server.js",
+    "start": "node server.js",
     
     "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
     "pretest": "echo 'about to run the test...'",
