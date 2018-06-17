@@ -86,10 +86,8 @@
     "npm": "*"
   },
   "scripts": {
-
     "prewatch":"echo inlined example and pre watched example",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "zbuild" :"webpack --mode production --display-error-details --progress --colors ./scripts/mylibrary.js",
     "zdev" :"webpack --mode development --display-error-details --progress --colors  ./scripts/mylibrary.js",
      "lint": "eslint --ext .js,.vue src",
     "prestart":"",
