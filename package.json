@@ -93,7 +93,7 @@
     "zdev" :"webpack --mode development --display-error-details --progress --colors  ./scripts/mylibrary.js",
      "lint": "eslint --ext .js,.vue src",
     "prestart":"",
-    "build": "build/build.js",
+    "postbuild": "node build/build.js",
     "watch":"node scripts/watch.js",
     "postwatch":"echo happends after everything finished for watch",
     "start": "node server.js",
