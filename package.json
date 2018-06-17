@@ -89,6 +89,8 @@
     "prewatch":"echo inlined example and pre watched example",
     "zbuild" :"webpack --mode production --display-error-details --progress --colors ./scripts/mylibrary.js",
     "zdev" :"webpack --mode development --display-error-details --progress --colors  ./scripts/mylibrary.js",
+    "build": "node build/build.js",
+     "lint": "eslint --ext .js,.vue src",
     "prestart":"",
     "watch":"node scripts/watch.js",
     "postwatch":"echo happends after everything finished for watch",
