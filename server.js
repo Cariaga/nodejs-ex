@@ -662,6 +662,10 @@ app.get('/hello2',(req, res) =>
   res.send(fruits);
 });
 
+//app get with parameters
+app.get('/users/:userId/', function (req, res) {
+  res.send(req.params)
+})
  
   
 console.log("-------inlined get example------------");
