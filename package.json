@@ -34,7 +34,7 @@
      "path":"^0.12.7",
      "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.0.0",
+    "vuetify": "^1.0.0"
 
   },
   "devDependencies": {
@@ -97,7 +97,6 @@
     "zdev" :"webpack --mode development --display-error-details --progress --colors  /scripts/mylibrary.js",
      "lint": "eslint --ext .js,.vue src",
     "prestart":"",
-    "build":"npm run dev",
     "watch":"node scripts/watch.js",
     "postwatch":"echo happends after everything finished for watch",
     "start": "&& node server.js",
